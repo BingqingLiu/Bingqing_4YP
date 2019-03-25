@@ -28,8 +28,7 @@ def Normalization(x,y):
     x_full = x_full.reshape(len(x_full),1)
     y_full = y
     y_full = np.asarray(y_full)
-    y_full = y_full.reshape(len(y_full),1)
-    y1_full = np.log(y_full+0.1) #offset by 0.1
+    y_full1 = y_full.reshape(len(y_full),1)
     y_full = (y1_full - np.mean(y1_full))/np.std(y1_full) #normalization
     return x_full, y_full, y1_full
 
